@@ -1,0 +1,265 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".AddReminderActivity" 
+    android:background="#ffffff" >
+    
+    <View
+        android:id="@+id/rect_line_top"
+        android:layout_width="100dp"
+        android:layout_height="1dip"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:background="#2C8EE8"
+       />
+    
+    <View
+        android:id="@+id/rect_line_left"
+        android:layout_width="1dip"
+        android:layout_height="100dp"
+        android:layout_alignLeft="@+id/rect_line_top"
+        android:layout_below="@id/rect_line_top"
+        android:background="#2C8EE8" 
+        />
+    
+    <View
+        android:id="@+id/rect_line_right"
+        android:layout_width="1dip"
+        android:layout_height="100dp"
+        android:layout_alignRight="@+id/rect_line_top"
+        android:layout_below="@id/rect_line_top"
+        android:background="#2C8EE8"
+       />
+    
+    <View
+        android:id="@+id/rect_line_bottom"
+        android:layout_width="100dp"
+        android:layout_height="1dip"
+        android:layout_below="@id/rect_line_left"
+        android:layout_marginLeft="10dp"
+        android:background="#2C8EE8"
+       />
+    
+     <TextView
+        android:id="@+id/addImageTxtView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/rect_line_right"
+        android:layout_alignRight="@+id/rect_line_right"
+        android:text="Add Image"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textSize="12sp"
+        android:layout_marginRight="5dp"
+        android:layout_marginBottom="5dp"
+        android:textColor="#2C8EE8" />
+
+    <ImageButton
+        android:id="@+id/addImageBtn"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_alignLeft="@+id/rect_line_top"
+        android:layout_below="@id/rect_line_top"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="12dp"
+        android:background="@null"
+        android:src="@drawable/add_pic" />
+
+    <EditText
+        android:id="@+id/medicationNameEditTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/medicationNameTxtView"
+        android:layout_toRightOf="@+id/rect_line_right"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="25dp"
+        android:background="@drawable/custom_btn_blue"
+        android:ems="10"
+        android:gravity="top"
+        android:inputType="textMultiLine"  >
+
+    </EditText>
+    
+    <TextView
+        android:id="@+id/medicationDescTxtView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/rect_line_bottom"
+        android:layout_below="@+id/rect_line_bottom"
+        android:layout_marginTop="20dp"
+        android:text="Medication Description"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="#2C8EE8" />
+    
+    <EditText
+        android:id="@+id/medicationDescEditTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="100dp"
+        android:layout_below="@+id/medicationDescTxtView"
+        android:layout_toRightOf="@+id/rect_line_left"
+        android:layout_alignParentRight="true"
+        android:layout_marginLeft="-2dp"
+        android:layout_marginRight="10dp"
+        android:ems="10"
+        android:background="@drawable/custom_btn_blue"
+        android:gravity="top"
+        android:inputType="textMultiLine" >
+    </EditText>
+    
+    <TextView
+        android:id="@+id/medicationTimeTxtView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/rect_line_bottom"
+        android:layout_below="@+id/medicationDescEditTxt"
+        android:layout_marginTop="33dp"
+        android:text="Time"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="#2C8EE8" />
+    
+    <TextView
+        android:id="@+id/repeatsTxtView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/rect_line_bottom"
+        android:layout_below="@+id/setTimeBtn"
+        android:layout_marginTop="35dp"
+        android:text="Repeats"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="#2C8EE8" />
+    
+    <Button
+        android:id="@+id/monBtn"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_below="@+id/repeatsTxtView"
+		android:layout_alignLeft="@+id/rect_line_bottom"
+		android:layout_marginTop="20dp"
+		android:layout_marginLeft="10dp"
+        android:text="M"
+        android:textColor="#2C8EE8"
+        android:background="@drawable/custom_btn_blue" />
+    
+    <Button
+        android:id="@+id/tueBtn"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_below="@+id/repeatsTxtView"
+		android:layout_toRightOf="@+id/monBtn"
+		android:layout_marginTop="20dp"
+		android:layout_marginLeft="20dp"
+        android:text="T"
+        android:textColor="#2C8EE8"
+        android:background="@drawable/custom_btn_blue" />
+    
+    <Button
+        android:id="@+id/wedBtn"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_below="@+id/repeatsTxtView"
+		android:layout_toRightOf="@+id/tueBtn"
+		android:layout_marginTop="20dp"
+		android:layout_marginLeft="20dp"
+        android:text="W"
+        android:textColor="#2C8EE8"
+        android:background="@drawable/custom_btn_blue" />
+    
+    <Button
+        android:id="@+id/thurBtn"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_below="@+id/repeatsTxtView"
+		android:layout_toRightOf="@+id/wedBtn"
+		android:layout_marginTop="20dp"
+		android:layout_marginLeft="20dp"
+        android:text="T"
+        android:textColor="#2C8EE8"
+        android:background="@drawable/custom_btn_blue" />
+    
+    <Button
+        android:id="@+id/friBtn"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_below="@+id/repeatsTxtView"
+		android:layout_toRightOf="@+id/thurBtn"
+		android:layout_marginTop="20dp"
+		android:layout_marginLeft="20dp"
+        android:text="F"
+        android:textColor="#2C8EE8"
+        android:background="@drawable/custom_btn_blue" />
+    
+    <Button
+        android:id="@+id/satBtn"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_below="@+id/monBtn"
+		android:layout_marginTop="20dp"
+		android:layout_marginLeft="115dp"
+        android:text="S"
+        android:textColor="#2C8EE8"
+        android:background="@drawable/custom_btn_blue" />
+    
+    <Button
+        android:id="@+id/sunBtn"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_below="@+id/monBtn"
+		android:layout_toRightOf="@+id/satBtn"
+		android:layout_marginTop="20dp"
+		android:layout_marginLeft="20dp"
+        android:text="S"
+        android:textColor="#2C8EE8"
+        android:background="@drawable/custom_btn_blue" />
+
+    <Button
+        android:id="@+id/setTimeBtn"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_alignBaseline="@+id/medicationTimeTxtView"
+        android:layout_alignBottom="@+id/medicationTimeTxtView"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/custom_btn_blue"
+        android:text="Set Time"
+        android:textColor="#2C8EE8" />
+
+    <TextView
+        android:id="@+id/medicationNameTxtView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/addImageBtn"
+        android:layout_toRightOf="@+id/rect_line_right"
+        android:text="Medication Name"
+        android:layout_marginLeft="25dp"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="#2C8EE8" />
+    
+    <Button
+        android:id="@+id/cancelBtn"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_below="@id/satBtn"
+        android:layout_alignLeft="@+id/rect_line_bottom"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/custom_btn_blue"
+        android:text="Cancel"
+        android:textColor="#2C8EE8" />
+
+    <Button
+        android:id="@+id/setAlarmBtn"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_alignRight="@+id/medicationDescEditTxt"
+        android:layout_below="@+id/sunBtn"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/custom_btn_blue"
+        android:text="Set Alarm"
+        android:textColor="#2C8EE8" />
+    
+</RelativeLayout>

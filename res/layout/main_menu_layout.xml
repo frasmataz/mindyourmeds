@@ -1,0 +1,57 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".MainMenuActivity" 
+    android:background="#ffffff" >
+
+    <TextView
+        android:id="@+id/mainMenuTxtView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:text="Main Menu"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="#2C8EE8" />
+    
+    <ImageView
+        android:id="@+id/clockImageView"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_below="@+id/mainMenuTxtView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:src="@drawable/alarm_clock" />
+
+    <Button
+        android:id="@+id/manageRemindersBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/clockImageView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:text="Manage Reminder"
+        android:textColor="#2C8EE8"
+        android:background="@drawable/custom_btn_blue" />
+
+    <Button
+        android:id="@+id/addReminderBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/manageRemindersBtn"
+        android:layout_alignRight="@+id/manageRemindersBtn"
+        android:layout_below="@+id/manageRemindersBtn"
+        android:layout_marginTop="30dp"
+        android:text="Add Reminder"
+        android:textColor="#2C8EE8"
+        android:background="@drawable/custom_btn_blue" />
+
+    
+    
+    </RelativeLayout>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="300dp"
+    android:layout_height="120dp" >
+
+    
+
+    <TextView
+        android:id="@+id/selectFromTxtView"
+        android:layout_width="220dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:text="Select image from"
+        android:textColor="#2C8EE8"
+        android:textSize="24sp" />
+
+    <Button
+        android:id="@+id/galleryDialogBtn"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_alignBaseline="@+id/cameraDialogBtn"
+        android:layout_alignBottom="@+id/cameraDialogBtn"
+        android:layout_alignLeft="@+id/selectFromTxtView"
+        android:text="Gallery"
+        android:textColor="#2C8EE8"
+        android:background="@drawable/custom_btn_blue" />
+
+    <Button
+        android:id="@+id/cameraDialogBtn"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_alignRight="@+id/selectFromTxtView"
+        android:layout_below="@+id/selectFromTxtView"
+        android:text="Camera"
+        android:textColor="#2C8EE8"
+        android:background="@drawable/custom_btn_blue" />
+
+</RelativeLayout>
